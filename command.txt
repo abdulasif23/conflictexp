@@ -1,0 +1,79 @@
+@abdulasif23 ➜ /workspaces/conflictexp (main) $ git checkout -b feature-login
+Switched to a new branch 'feature-login'
+@abdulasif23 ➜ /workspaces/conflictexp (feature-login) $ git branch
+* feature-login
+  main
+@abdulasif23 ➜ /workspaces/conflictexp (feature-login) $ echo "Login Feature Added" >> app.txt
+@abdulasif23 ➜ /workspaces/conflictexp (feature-login) $ git add .
+@abdulasif23 ➜ /workspaces/conflictexp (feature-login) $ git commit -m "Added login feature"
+[feature-login a36182d] Added login feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 app.txt
+@abdulasif23 ➜ /workspaces/conflictexp (feature-login) $ git push origin feature-login
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 307 bytes | 307.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'feature-login' on GitHub by visiting:
+remote:      https://github.com/abdulasif23/conflictexp/pull/new/feature-login
+remote: 
+To https://github.com/abdulasif23/conflictexp
+ * [new branch]      feature-login -> feature-login
+@abdulasif23 ➜ /workspaces/conflictexp (feature-login) $ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+@abdulasif23 ➜ /workspaces/conflictexp (main) $ git checkout -b feature-dashboard
+Switched to a new branch 'feature-dashboard'
+@abdulasif23 ➜ /workspaces/conflictexp (feature-dashboard) $ echo "Dashboard Feature Added" >> app.txt
+@abdulasif23 ➜ /workspaces/conflictexp (feature-dashboard) $ git add .
+@abdulasif23 ➜ /workspaces/conflictexp (feature-dashboard) $ git commit -m "Added dashboard feature"
+[feature-dashboard d394a7d] Added dashboard feature
+ 1 file changed, 1 insertion(+)
+ create mode 100644 app.txt
+@abdulasif23 ➜ /workspaces/conflictexp (feature-dashboard) $ git push origin feature-dashboard
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: 
+remote: Create a pull request for 'feature-dashboard' on GitHub by visiting:
+remote:      https://github.com/abdulasif23/conflictexp/pull/new/feature-dashboard
+remote: 
+To https://github.com/abdulasif23/conflictexp
+ * [new branch]      feature-dashboard -> feature-dashboard
+@abdulasif23 ➜ /workspaces/conflictexp (feature-dashboard) $ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+@abdulasif23 ➜ /workspaces/conflictexp (main) $ git merge feature-login
+Updating e3aa8b7..a36182d
+Fast-forward
+ app.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 app.txt
+@abdulasif23 ➜ /workspaces/conflictexp (main) $ git merge feature-dashboard
+Auto-merging app.txt
+CONFLICT (add/add): Merge conflict in app.txt
+Automatic merge failed; fix conflicts and then commit the result.
+@abdulasif23 ➜ /workspaces/conflictexp (main) $ git add app.txt
+@abdulasif23 ➜ /workspaces/conflictexp (main) $ git commit -m "Resolved merge conflict"
+[main a61b476] Resolved merge conflict
+@abdulasif23 ➜ /workspaces/conflictexp (main) $ git push origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 353 bytes | 353.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/abdulasif23/conflictexp
+   e3aa8b7..a61b476  main -> main
+@abdulasif23 ➜ /workspaces/conflictexp (main) $ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+@abdulasif23 ➜ /workspaces/conflictexp (main) $ 
